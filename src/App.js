@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import Listas from './components/Listas';
+import Eventos from './components/Eventos'
+import Frutas from './components/Frutas';
+import Propiedades from './components/Propiedades';
+import Estados from './components/Estados';
+import FormNoControlado from './components/FormNoControlado';
+import Formulario from './components/Formulario';
 
-function App() {
+function App() {//definimos un arreglo con frutas
+
+  //definimos una props a utilizar
+  const Comida = ['🍕','🍔','🍟','🌭','🍿'];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App-header">
+    <h3>Aprendiendo los fundamentos de React</h3>
+    <hr/>
+      <Listas/>
+      <hr/>
+      <h3>manejo de eventos</h3>
+      <Eventos/>
+      <hr/>
+      <h3>Componentes</h3>
+      <Frutas/>
+      <hr/>
+      <Propiedades propiedad={Comida}/>
+      <hr/>
+      <Estados/>
+      <hr/>
+      <FormNoControlado/>
+      <hr/>
+      <Formulario/>
     </div>
   );
 }
